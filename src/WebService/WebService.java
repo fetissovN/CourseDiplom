@@ -49,9 +49,15 @@ public class WebService{
                 listUsers.add(user);
 //                System.out.println(user);
             }
-            db.closeConnection();
+//            db.closeConnection();
         } catch (SQLException e) {
             e.printStackTrace();
+        }finally{
+            try {
+                db.closeConnection();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return listUsers;
     }
@@ -68,9 +74,15 @@ public class WebService{
             while(resultSet.next()){
                 list.add(resultSet.getString("user_name"));
             }
-            db.closeConnection();
+//            db.closeConnection();
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally{
+            try {
+                db.closeConnection();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return list;
     }
