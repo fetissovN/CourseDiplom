@@ -82,11 +82,12 @@ public class WebService{
                price=price+resultSet.getInt("price_hour");
 //                System.out.println(price);
             }
-            db.closeConnection();
+//            db.closeConnection();
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return price;
     }
 
