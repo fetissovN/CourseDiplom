@@ -3,7 +3,6 @@ package WebService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.mindrot.jbcrypt.BCrypt;
-import sample.AdminController;
 import sample.DB;
 
 import java.sql.*;
