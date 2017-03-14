@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label contentDisplay="CENTER" depthTest="DISABLE" layoutX="103.0" layoutY="20.0" prefHeight="59.0" prefWidth="101.0" rotate="19.0" text="Web Service" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="logIn" defaultButton="true" layoutX="150.0" layoutY="192.0" mnemonicParsing="false" onAction="#checkLogin" text="Log In" underline="true" />
+      <TextField fx:id="name" layoutX="114.0" layoutY="109.0" />
+      <Label layoutX="47.0" layoutY="113.0" prefHeight="17.0" prefWidth="37.0" text="Login" />
+      <Label layoutX="47.0" layoutY="154.0" text="Password" />
+      <Label fx:id="label" layoutX="17.0" layoutY="196.0" text="wrong personal data" textFill="RED" visible="false" />
+      <PasswordField fx:id="pass" layoutX="114.0" layoutY="150.0" />
+   </children>
+</Pane>
