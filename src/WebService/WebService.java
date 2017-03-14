@@ -26,9 +26,14 @@ public class WebService{
                 listProjects.add(progect);
 //                System.out.println(progect);
             }
-            db.closeConnection();
         } catch (SQLException e) {
             e.printStackTrace();
+        }finally{
+            try {
+                db.closeConnection();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return listProjects;
     }
