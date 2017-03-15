@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HistoryController">
+   <children>
+      <ListView fx:id="listView" layoutX="28.0" layoutY="40.0" onMouseClicked="#showData" prefHeight="276.0" prefWidth="464.0" />
+      <Button fx:id="close" layoutX="798.0" layoutY="327.0" mnemonicParsing="false" onAction="#Close" text="Close" />
+      <VBox layoutX="520.0" layoutY="40.0" prefHeight="113.0" prefWidth="73.0">
+         <children>
+            <Label text="Progecting" />
+            <Label text="Design" />
+            <Label text="Site Layout" />
+            <Label text="Back-end" />
+            <Label text="Testing" />
+            <Label text="Promotion" />
+         </children>
+      </VBox>
+      <VBox layoutX="611.0" layoutY="40.0" prefHeight="113.0" prefWidth="144.0">
+         <children>
+            <Label fx:id="hName1" text="l" />
+            <Label fx:id="hName2" text="l" />
+            <Label fx:id="hName3" text="l" />
+            <Label fx:id="hName4" text="l" />
+            <Label fx:id="hName5" text="l" />
+            <Label fx:id="hName6" text="l" />
+         </children>
+      </VBox>
+      <VBox layoutX="764.0" layoutY="40.0" prefHeight="113.0" prefWidth="30.0">
+         <children>
+            <Label fx:id="hHours1" text="l" />
+            <Label fx:id="hHours2" text="l" />
+            <Label fx:id="hHours3" text="l" />
+            <Label fx:id="hHours4" text="l" />
+            <Label fx:id="hHours5" text="l" />
+            <Label fx:id="hHours6" text="l" />
+         </children>
+      </VBox>
+      <VBox layoutX="825.0" layoutY="40.0" prefHeight="113.0" prefWidth="23.0">
+         <children>
+            <Label fx:id="hProc1" text="l" />
+            <Label fx:id="hProc2" text="l" />
+            <Label fx:id="hProc3" text="l" />
+            <Label fx:id="hProc4" text="l" />
+            <Label fx:id="hProc5" text="l" />
+            <Label fx:id="hProc6" text="l" />
+         </children>
+      </VBox>
+      <Label layoutX="611.0" layoutY="14.0" text="Name" />
+      <Label layoutX="763.0" layoutY="14.0" text="Hours" />
+      <Label layoutX="820.0" layoutY="14.0" text="\%" />
+      <VBox layoutX="885.0" layoutY="40.0" prefHeight="113.0" prefWidth="23.0" visible="false">
+         <children>
+            <Label fx:id="hPrice1" text="l" />
+            <Label fx:id="hPrice2" text="l" />
+            <Label fx:id="hPrice3" text="l" />
+            <Label fx:id="hPrice4" text="l" />
+            <Label fx:id="hPrice5" text="l" />
+            <Label fx:id="hPrice6" text="l" />
+         </children>
+      </VBox>
+      <Label layoutX="879.0" layoutY="14.0" text="Price h" visible="false" />
+   </children>
+</Pane>

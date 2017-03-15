@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminController">
+   <children>
+      <MenuBar prefHeight="26.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Web service">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showHistory" text="History" />
+               <MenuItem fx:id="stageMenu" mnemonicParsing="false" onAction="#stageMenuShow" text="Stages" />
+               <MenuItem fx:id="" mnemonicParsing="false" onAction="#logOut" text="Log out" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane prefHeight="376.0" prefWidth="950.0">
+         <children>
+            <TableView fx:id="tableViewP" layoutX="14.0" layoutY="8.0" prefHeight="314.0" prefWidth="431.0">
+              <columns>
+                <TableColumn fx:id="numberCol" prefWidth="34.0" text="№" />
+                <TableColumn fx:id="nameCol" prefWidth="122.0" text="Progect Name" />
+                  <TableColumn fx:id="descCol" prefWidth="144.0" text="Description" />
+                  <TableColumn fx:id="statusCol" prefWidth="65.0" text="Status" />
+                  <TableColumn fx:id="priceCol" prefWidth="63.0" text="Price" />
+              </columns>
+            </TableView>
+            <Pane fx:id="paneAdd" layoutX="505.0" layoutY="6.0" prefHeight="325.0" prefWidth="374.0" visible="false">
+               <children>
+                  <TextField fx:id="tfName" layoutX="80.0" layoutY="14.0" prefHeight="25.0" prefWidth="142.0" />
+                  <TextField fx:id="tfDesc" layoutX="80.0" layoutY="50.0" prefHeight="25.0" prefWidth="281.0" />
+                  <Label fx:id="projectingCh" layoutX="59.0" layoutY="99.0" text="Progecting" />
+                  <Label fx:id="designCh" layoutX="59.0" layoutY="117.0" prefHeight="26.0" prefWidth="45.0" text="Design" />
+                  <Label fx:id="layoutCh" layoutX="59.0" layoutY="143.0" prefHeight="26.0" prefWidth="65.0" text="Site Layout" />
+                  <Label fx:id="backCh" layoutX="59.0" layoutY="169.0" prefHeight="26.0" prefWidth="58.0" text="Back-end" />
+                  <Label fx:id="testingCh" layoutX="59.0" layoutY="195.0" prefHeight="26.0" prefWidth="58.0" text="Testing" />
+                  <Label fx:id="label" layoutX="59.0" layoutY="270.0" prefHeight="26.0" prefWidth="188.0" text="" />
+                  <ChoiceBox fx:id="choiceBox1" layoutX="150.0" layoutY="91.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="choiceBox2" layoutX="150.0" layoutY="118.0" prefWidth="150.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></ChoiceBox>
+                  <ChoiceBox fx:id="choiceBox3" layoutX="150.0" layoutY="144.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="choiceBox4" layoutX="150.0" layoutY="170.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="choiceBox5" layoutX="150.0" layoutY="196.0" prefWidth="150.0" />
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="45.0" text="Name" />
+                  <Label layoutX="14.0" layoutY="50.0" prefHeight="26.0" prefWidth="71.0" text="Description" />
+                  <Button layoutX="300.0" layoutY="271.0" mnemonicParsing="false" onAction="#addNewPr" text="Save" />
+                  <TextField fx:id="tf2" layoutX="327.0" layoutY="119.0" prefHeight="25.0" prefWidth="24.0" />
+                  <TextField fx:id="tf3" layoutX="327.0" layoutY="144.0" prefHeight="25.0" prefWidth="24.0" />
+                  <TextField fx:id="tf4" layoutX="327.0" layoutY="170.0" prefHeight="25.0" prefWidth="24.0" />
+                  <TextField fx:id="tf5" layoutX="327.0" layoutY="196.0" prefHeight="25.0" prefWidth="24.0" />
+                  <TextField fx:id="tf1" layoutX="327.0" layoutY="91.0" prefHeight="25.0" prefWidth="24.0" />
+                  <Label fx:id="promoCh" layoutX="58.0" layoutY="221.0" prefHeight="26.0" prefWidth="58.0" text="Promotion" />
+                  <ChoiceBox fx:id="choiceBox6" layoutX="150.0" layoutY="222.0" prefWidth="150.0" />
+                  <TextField fx:id="tf6" layoutX="327.0" layoutY="222.0" prefHeight="25.0" prefWidth="24.0" />
+               </children>
+            </Pane>
+            <Button layoutX="456.0" layoutY="8.0" mnemonicParsing="false" onAction="#addP" text="+" />
+            <Button layoutX="456.0" layoutY="42.0" mnemonicParsing="false" onAction="#addObs" prefHeight="25.0" prefWidth="24.0" text="?" />
+            <Pane fx:id="paneObs" layoutX="480.0" layoutY="6.0" prefHeight="325.0" prefWidth="431.0" visible="false">
+               <children>
+                  <TextField fx:id="tfName1" layoutX="80.0" layoutY="14.0" prefHeight="25.0" prefWidth="142.0" />
+                  <TextField fx:id="tfDesc1" layoutX="80.0" layoutY="50.0" prefHeight="25.0" prefWidth="281.0" />
+                  <Label fx:id="projectingCh1" layoutX="15.0" layoutY="95.0" text="Progecting" />
+                  <Label fx:id="designCh1" layoutX="14.0" layoutY="119.0" prefHeight="26.0" prefWidth="45.0" text="Design" />
+                  <Label fx:id="layoutCh1" layoutX="17.0" layoutY="144.0" prefHeight="26.0" prefWidth="65.0" text="Site Layout" />
+                  <Label fx:id="backCh1" layoutX="15.0" layoutY="170.0" prefHeight="26.0" prefWidth="58.0" text="Back-end" />
+                  <Label fx:id="testingCh1" layoutX="15.0" layoutY="196.0" prefHeight="26.0" prefWidth="58.0" text="Testing" />
+                  <ChoiceBox fx:id="choiceBox11" layoutX="112.0" layoutY="91.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="choiceBox21" layoutX="112.0" layoutY="119.0" prefWidth="150.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </ChoiceBox>
+                  <ChoiceBox fx:id="choiceBox31" layoutX="112.0" layoutY="144.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="choiceBox41" layoutX="112.0" layoutY="170.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="choiceBox51" layoutX="112.0" layoutY="196.0" prefWidth="150.0" />
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="45.0" text="Name" />
+                  <Label layoutX="14.0" layoutY="50.0" prefHeight="26.0" prefWidth="71.0" text="Description" />
+                  <Button layoutX="300.0" layoutY="276.0" mnemonicParsing="false" onAction="#editPrObsSave" text="Edit" />
+                  <TextField fx:id="tf21" layoutX="288.0" layoutY="119.0" prefHeight="25.0" prefWidth="24.0" />
+                  <TextField fx:id="tf31" layoutX="288.0" layoutY="144.0" prefHeight="25.0" prefWidth="24.0" />
+                  <TextField fx:id="tf41" layoutX="288.0" layoutY="170.0" prefHeight="25.0" prefWidth="24.0" />
+                  <TextField fx:id="tf51" layoutX="288.0" layoutY="196.0" prefHeight="25.0" prefWidth="24.0" />
+                  <TextField fx:id="tf11" layoutX="288.0" layoutY="91.0" prefHeight="25.0" prefWidth="24.0" />
+                  <Button fx:id="push" layoutX="141.0" layoutY="276.0" mnemonicParsing="false" onAction="#stageIncr" text="Push to next stage" />
+
+                  <Label fx:id="stageLabelEdit" layoutX="30.0" layoutY="280.0" text="" />
+                  <Label fx:id="promoCh1" layoutX="15.0" layoutY="222.0" prefHeight="26.0" prefWidth="58.0" text="Promotion" />
+                  <ChoiceBox fx:id="choiceBox61" layoutX="112.0" layoutY="222.0" prefWidth="150.0" />
+                  <TextField fx:id="tf61" layoutX="288.0" layoutY="222.0" prefHeight="25.0" prefWidth="24.0" />
+                  <Slider fx:id="slider" layoutX="354.0" layoutY="104.0" orientation="VERTICAL" prefHeight="139.0" prefWidth="14.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane prefHeight="273.0" prefWidth="950.0">
+         <children>
+            <TableView fx:id="tableViewU" layoutX="16.0" layoutY="16.0" prefHeight="217.0" prefWidth="303.0">
+              <columns>
+                  <TableColumn fx:id="idUCol" prefWidth="37.0" text="Id" />
+                <TableColumn fx:id="nameUserCol" prefWidth="113.0" text="Name" />
+                  <TableColumn fx:id="procCol" prefWidth="71.0" text="Procentage" />
+                  <TableColumn fx:id="busy" prefWidth="79.0" text="Is Busy" />
+              </columns>
+            </TableView>
+            <Pane fx:id="addPPane" layoutX="408.0" layoutY="5.0" prefHeight="232.0" prefWidth="492.0" visible="false">
+               <children>
+                  <Label layoutX="13.0" layoutY="25.0" text="Name" />
+                  <TextField fx:id="addPName" layoutX="74.0" layoutY="21.0" />
+                  <Label layoutX="14.0" layoutY="59.0" text="Login" />
+                  <TextField fx:id="addPLogin" layoutX="74.0" layoutY="55.0" />
+                  <Label layoutX="12.0" layoutY="92.0" text="Password" />
+                  <TextField fx:id="addPPassword" layoutX="74.0" layoutY="88.0" />
+                  <Label layoutX="13.0" layoutY="125.0" text="Procentsge" />
+                  <TextField fx:id="addPProcentage" layoutX="74.0" layoutY="121.0" prefHeight="25.0" prefWidth="45.0" />
+                  <VBox layoutX="252.0" layoutY="15.0" prefHeight="105.0" prefWidth="100.0">
+                     <children>
+                        <CheckBox fx:id="cbAddProjecting" mnemonicParsing="false" text="Progecting" />
+                        <CheckBox fx:id="cbAddDesign" mnemonicParsing="false" text="Design" />
+                        <CheckBox fx:id="cbAddLayout" mnemonicParsing="false" text="Site Layout" />
+                        <CheckBox fx:id="cbAddBack" mnemonicParsing="false" text="Back-end" />
+                        <CheckBox fx:id="cbAddTesting" mnemonicParsing="false" text="Testing" />
+                        <CheckBox fx:id="cbAddPromo" mnemonicParsing="false" text="Promotion" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="addPButton" layoutX="413.0" layoutY="190.0" mnemonicParsing="false" onAction="#addPerson" text="Add" />
+               </children>
+            </Pane>
+            <Button fx:id="addPerson" layoutX="338.0" layoutY="16.0" mnemonicParsing="false" onAction="#showAddPersonPane" text="Add" />
+            <Button fx:id="editPerson" layoutX="338.0" layoutY="47.0" mnemonicParsing="false" onAction="#showEditPersonPane" text="Edit" />
+            <Button fx:id="deletePerson" layoutX="338.0" layoutY="79.0" mnemonicParsing="false" onAction="#deleteU" text="Delete" />
+            <Pane fx:id="EditPPane1" layoutX="418.0" layoutY="15.0" prefHeight="232.0" prefWidth="492.0" visible="false">
+               <children>
+                  <Label layoutX="13.0" layoutY="25.0" text="Name" />
+                  <TextField fx:id="addPName1" layoutX="74.0" layoutY="21.0" />
+                  <Label layoutX="14.0" layoutY="59.0" text="Login" />
+                  <TextField fx:id="addPLogin1" layoutX="74.0" layoutY="55.0" />
+                  <Label layoutX="12.0" layoutY="92.0" text="Password" />
+                  <TextField fx:id="addPPassword1" layoutX="74.0" layoutY="88.0" />
+                  <Label layoutX="13.0" layoutY="125.0" text="Procentsge" />
+                  <TextField fx:id="addPProcentage1" layoutX="74.0" layoutY="121.0" prefHeight="25.0" prefWidth="45.0" />
+                  <VBox layoutX="252.0" layoutY="15.0" prefHeight="105.0" prefWidth="100.0">
+                     <children>
+                        <CheckBox fx:id="cbAddProjecting1" mnemonicParsing="false" text="Progecting" />
+                        <CheckBox fx:id="cbAddDesign1" mnemonicParsing="false" text="Design" />
+                        <CheckBox fx:id="cbAddLayout1" mnemonicParsing="false" text="Site Layout" />
+                        <CheckBox fx:id="cbAddBack1" mnemonicParsing="false" text="Back-end" />
+                        <CheckBox fx:id="cbAddTesting1" mnemonicParsing="false" text="Testing" />
+                        <CheckBox fx:id="cbAddPromo1" mnemonicParsing="false" text="Promotion" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="addPButton1" layoutX="413.0" layoutY="190.0" mnemonicParsing="false" onAction="#saveEditPerson" text="Edit" />
+                  <Button fx:id="showPrBtn" layoutX="19.0" layoutY="165.0" mnemonicParsing="false" onAction="#showPrBtnF" text="Show projects working at" />
+               </children>
+            </Pane>
+            <Label fx:id="busyL" textFill="RED" layoutX="343.0" layoutY="116.0" text="Busy" visible="false"/>
+         </children>
+      </Pane>
+   </children>
+</VBox>
