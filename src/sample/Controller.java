@@ -1,6 +1,6 @@
 package sample;
 
-import WebService.Password;
+
 import WebService.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -62,7 +62,6 @@ public class Controller {
     public void checkLogin(){
         String nameS = name.getText();
         String passwordS = pass.getText();
-//        String passHash = new Password().hashPassword(passwordS);
         DB db = new DB();
         db.connect();
         ResultSet rs = db.getSetForPassByName(nameS);

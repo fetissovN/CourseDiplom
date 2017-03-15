@@ -1,6 +1,6 @@
 package sample;
 
-import WebService.Password;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,9 +15,6 @@ public class Main extends Application {
         primaryStage.setTitle("Log In Web Service");
         primaryStage.setScene(new Scene(root, 300, 260));
         primaryStage.show();
-//        Password password = new Password();
-//        String s = password.hashPassword("admin");
-//        System.out.println(s);
     }
 
 
